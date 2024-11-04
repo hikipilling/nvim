@@ -99,6 +99,11 @@ return {
             server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
             require('lspconfig')[server_name].setup(server)
           end,
+          html = function()
+            require('lspconfig').html.setup {
+              filetypes = { 'html', 'ejs' },
+            }
+          end,
         },
       }
     end,

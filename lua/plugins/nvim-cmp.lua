@@ -29,6 +29,9 @@ return {
       local luasnip = require 'luasnip'
       luasnip.config.setup {}
 
+      vim.filetype.add { extension = { ejs = 'ejs' } }
+      luasnip.filetype_set('ejs', { 'html', 'javascript', 'ejs' })
+
       cmp.setup {
         snippet = {
           expand = function(args)

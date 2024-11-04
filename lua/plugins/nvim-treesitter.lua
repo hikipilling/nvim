@@ -10,7 +10,11 @@ return {
         enable = true,
         additional_vim_regex_highlighting = { 'ruby' },
       },
-      indent = { enable = true, disable = { 'ruby' } },
+      indent = { enable = true, disable = { 'ruby', 'html' } },
     },
+    config = function()
+      vim.treesitter.language.register('html', 'ejs')
+      vim.treesitter.language.register('javascript', 'ejs')
+    end,
   },
 }
