@@ -45,6 +45,8 @@ return {
       dashboard.button('q', '  Quit NVIM', '<cmd>qa<CR>'),
     }
 
+    dashboard.section.header.opts.hl = 'Special'
+
     alpha.setup(dashboard.opts)
   end,
 }
