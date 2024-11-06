@@ -12,7 +12,7 @@ return {
       },
       indent = { enable = true, disable = { 'ruby', 'html' } },
     },
-    config = function()
+    init = function()
       vim.treesitter.language.register('html', 'ejs')
       vim.treesitter.language.register('javascript', 'ejs')
     end,
