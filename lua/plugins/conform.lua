@@ -30,6 +30,18 @@ return {
       end,
       formatters_by_ft = {
         lua = { 'stylua' },
+        javascript = { 'prettier' },
+        typescript = { 'prettier' },
+        javascriptreact = { 'prettier' },
+        typescriptreact = { 'prettier' },
+      },
+      formatters = {
+        prettier = {
+          prepend_args = {
+            '--semi',
+            '--single-quote=false',
+          },
+        },
       },
     },
   },
